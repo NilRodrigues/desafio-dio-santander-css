@@ -2,6 +2,7 @@
 
 body {
   background-color: black;
+  font-family: Arial, sans-serif;
 }
 
 h2 {
@@ -17,8 +18,15 @@ p {
   color: white;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 section {
   margin: 100px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .banner {
@@ -32,9 +40,12 @@ section {
 
 .banner .banner-content {
   color: white;
-  width: 600px;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
   text-align: center;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .banner h1 {
@@ -82,12 +93,15 @@ section {
   border-radius: 30px;
 }
 
-#course-content {
+#course-content,
+#professional-challenges {
   width: 100%;
   max-width: 800px;
+  margin: auto;
+  text-align: center;
   padding: 0 16px;
+  box-sizing: border-box;
 }
-
 
 #course-content .modules-list {
   margin: 24px 0;
@@ -95,7 +109,8 @@ section {
 
 #course-content .modules-list .module {
   color: white;
-  width: 530px;
+  width: 100%;
+  max-width: 530px;
   margin: 0 auto 24px;
   border: 1px solid #33A8DB;
   background-color: #252525;
@@ -109,13 +124,15 @@ section {
 }
 
 #transform-world {
-  height: 560px;
+  height: auto;
   background-size: cover;
   background-image: url("images/woman-code.png");
-  background-attachment: fixed;
+  background-attachment: scroll;
   border-top: 1px solid #33A8DB80;
   border-bottom: 1px solid #33A8DB80;
-  padding: 200px;
+  padding: 200px 16px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 #transform-world p {
@@ -124,11 +141,7 @@ section {
   text-transform: lowercase;
   max-width: 250px;
   text-shadow: 3px 2px #33A8DB;
-}
-
-#professional-challenges {
-  text-align: center;
-  width: 800px;
+  margin: auto;
 }
 
 #professional-challenges img {
@@ -153,9 +166,14 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  .banner .banner-content {
-    width: 100%;
-    padding: 0 16px;
+  .banner {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .banner .logo {
+    width: 180px;
+    height: 180px;
   }
 
   .banner h1 {
@@ -166,25 +184,13 @@ footer a {
     font-size: 1rem;
   }
 
-  .banner .logo {
-    width: 180px;
-    height: 180px;
-  }
-
-  #course-content,
-  #professional-challenges {
-    width: 100%;
-    padding: 0 16px;
-  }
-
-  #course-content .modules-list .module {
-    width: 100%;
+  .banner .banner-content button {
+    padding: 12px 24px;
     font-size: 0.9rem;
   }
 
   #transform-world {
-    padding: 100px 16px;
-    background-attachment: scroll;
+    padding: 80px 16px;
   }
 
   #transform-world p {
@@ -192,7 +198,17 @@ footer a {
     max-width: 100%;
   }
 
+  .modules-list .module {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
   footer .dio-logo {
-    width: 80%;
+    width: 200px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
   }
 }
